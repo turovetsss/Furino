@@ -1,0 +1,112 @@
+.cart_block {
+    display: flex;
+    justify-content: center;
+    padding: 72px 100px;
+}
+
+.cart_block-product {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.cart_block-product-product-header {
+    display: flex;
+    padding: 15px 145px;
+    background-color: #F9F1E7;
+}
+
+.cart_block-product-product-list {
+    display: flex;
+    margin-top: 62px;
+}
+
+.cart_block-product-product-list .background-sofa {
+    background-image: url('../img/Asgaard sofa 5.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 111px;
+    min-height: 90px;
+    margin-right: 35px;
+}
+
+.cart_block-product-product-list .list-product {
+    display: flex;
+    align-items: center;
+}
+
+.cart_block-product-product-list .price {
+    display: flex;
+    align-items: center;
+}
+
+.cart_block-product-product-list .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.cart_block-product-product-list .subtotal {
+    display: flex;
+    align-items: center;
+}
+
+.cart_block-product-totals {
+    background-color: #F9F1E7;
+    padding: 15px 75px 80px 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart_block-product-totals .total-text {
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.cart_block-product-totals .subtotal {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.cart_block-product-totals .total {
+    display: flex;
+    margin-bottom: 48px;
+}
+
+.cart_block-product-totals .subtotal p {
+    font-size: 16px;
+    padding-right: 60px;
+}
+
+.cart_block-product-totals .total p {
+    font-size: 16px;
+    padding-right: 60px;
+}
+
+.cart_block-product-totals .subtotal p:nth-child(n):last-child {
+    padding-right: 0;
+}
+
+.cart_block-product-totals .total p:nth-child(n):last-child {
+    padding-right: 0;
+    font-size: 20px;
+}
+
+.cart_block-product-totals .button-total {
+    background: inherit;
+    padding: 14px 58px;
+    color: #000000;
+    border-radius: 15px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.cart_block-product-totals .button-total:active {
+    /* Стили для активного состояния (когда кнопка нажата) */
+    background-color: #fdb44e; /* Изменение цвета фона */
+    transform: translateY(2px); /* Добавление небольшой теньки при нажатии */
+}
+
+/*.cart_block-product-product-header p {*/
+/*  padding-right: ;*/
+/*}*/

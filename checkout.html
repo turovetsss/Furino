@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,900;1,600&display=swap"
+          rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__container _container">
+            <a href="" class="header__logo">
+                <img src="img/Meubel House_Logos-05.png" alt="">
+                Furniro
+            </a>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Shop</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">About</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="header__group menu">
+                <ul class="group__list">
+                    <li class="group__item">
+                        <a href="" class="group__link"><img src="img/mdi_account-alert-outline.png" alt="" width="23"
+                                                            height="23"></a>
+                    </li>
+                    <li class="group__item">
+                        <a href="" class="group__link"><img src="img/akar-icons_search.png" width="23" height="23"></a>
+                    </li>
+                    <li class="group__item">
+                        <a href="" class="group__link"><img src="img/akar-icons_heart.png" width="23" height="23"></a>
+                    </li>
+                    <li class="group__item">
+                        <a href="" class="group__link"><img src="img/ant-design_shopping-cart-outlined.png" width="23"
+                                                            height="23"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="page__main-block main-block">
+        <div class="main-block__container">
+            <img src="img/Meubel House_Logos-05.png" alt="">
+            <h1 class="main-block__title">Checkout</h1>
+            <div class="main-block__text">
+                <a href="" class="main-block__text">Home</a>
+                <img src="img/dashicons_arrow-down-alt2.png" alt="" class="" width="16px">
+                <a href="" class="main-block__text" style="font-weight: 400;">Checkout</a>
+            </div>
+        </div>
+    </div>
+    <div class="checkout-form-product">
+        <div class="checkout">
+            <h3 style="font-weight: 700; font-size: 30px; margin-bottom: 35px;">Billing details</h3>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="">
+            <label for="cname">Company Name(optional)</label>
+            <input type="text" id="cname" name="companyname" placeholder="">
+            <label for="cname">Company Name</label>
+            <input type="text" id="cname" name="companyname" placeholder="">
+            <label for="country">Country / Region</label>
+            <select id="country" name="country">
+                <option value="france"></option>
+                <option value="germany"></option>
+                <option value="italy"></option>
+            </select>
+            <label for="street">Street Address</label>
+            <input type="text" id="street" name="street" placeholder="">
+            <label for="city">Town / City</label>
+            <input type="text" id="city" name="city" placeholder="">
+            <label for="province">Province</label>
+            <select id="province" name="province">
+                <option value="western">Western province</option>
+                <option value="germany"></option>
+                <option value="italy"></option>
+            </select>
+            <label for="zip">ZIP code</label>
+            <input type="text" id="zip" name="zip" placeholder="">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="">
+            <label for="email">Email address</label>
+            <input type="text" id="email" name="email" placeholder="">
+            <input type="text" id="additional-info" name="additional-info" placeholder="Additional information">
+        </div>
+        <div class="form_product">
+            <div class="form-total">
+                <p style="font-weight: 700; font-size: 24px;">
+                    <span>Product</span>
+                    <span>Subtotal</span>
+                </p>
+                <p>
+                    <span style="color: grey;">Asgaard sofa</span>
+                    <span>Rs. 250,000.00</span>
+                </p>
+                <p>
+                    <span>Subtotal</span>
+                    <span>Rs. 250,000.00</span>
+                </p>
+                <p>
+                    <span>Total</span>
+                    <span style="font-size: 20px; font-style: normal; font-weight: 700; color: var(--Primary, #B88E2F);">Rs. 250,000.00</span>
+                </p>
+                <hr/>
+                <p>
+          <span>
+            <input type="checkbox" class="checkbox-round"/> Direct Bank Transfer
+          </span>
+                </p>
+                <p style="color: #9F9F9F;">
+                    Make your payment directly into our bank account. Please use your Order ID as the payment reference.
+                    Your order will not be shipped until the funds have cleared in our account.
+                </p>
+                <p style="color: #9F9F9F;">
+          <span>
+            <input type="checkbox" class="checkbox-round"/> Direct Bank Transfer
+          </span>
+                </p>
+                <p style="color: #9F9F9F;">
+          <span>
+            <input type="checkbox" class="checkbox-round"/> Direct Bank Transfer
+          </span>
+                </p>
+                <p>
+          <span>
+            Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <b>privacy policy</b>.
+          </span>
+                </p>
+                <a href="#" class="total_btn">Place order</a>
+            </div>
+        </div>
+    </div>
+    <section class="page__advantages advantages">
+        <div class="advantages__container _container">
+            <div class="advantages__body">
+                <div class="advantages__column">
+                    <div class="advantages__item">
+                        <div class="advantages__icon">
+                            <img src="img/trophy 1.png" alt="" class="" width="40px" height="40px">
+                        </div>
+                        <div class="advantages__value">
+                            High quality<br>
+                            <a class="advantages__text">crafted from top materials</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages__column">
+                    <div class="advantages__item">
+                        <div class="advantages__icon">
+                            <img src="img/guarantee.png" alt="" class="" width="40px" height="40px">
+                        </div>
+                        <div class="advantages__value">
+                            Warranty Protection<br>
+                            <a class="advantages__text">Over 2 years</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages__column">
+                    <div class="advantages__item">
+                        <div class="advantages__icon">
+                            <img src="img/shipping.png" alt="" class="" width="40px" height="40px">
+                        </div>
+                        <div class="advantages__value">
+                            Free Shipping<br>
+                            <a class="advantages__text">Order over 150 $</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages__column">
+                    <div class="advantages__item">
+                        <div class="advantages__icon">
+                            <img src="img/customer-support.png" alt="" class="" width="40px" height="40px">
+                        </div>
+                        <div class="advantages__value">
+                            24 / 7 Support<br>
+                            <a class="advantages__text">Dedicated support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="padding_4x">
+        <div class="flex">
+            <section class="flex-content padding_1x">
+                <h2 href="#">Furniro.</h2>
+                <h3>400 University Drive Suite 200 Coral Gables, FL 33134 USA</h3>
+            </section>
+            <section class="flex-content padding_1x">
+                <h3>Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </section>
+            <section class="flex-content padding_1x">
+                <h3>Help</h3>
+                <a href="#">Payment Options</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy Policies</a>
+            </section>
+            <section class="flex-content padding_1x">
+                <h3>Newsletter</h3>
+                <fieldset class="fixed_flex">
+                    <input class="some-input" type="email" name="newsletter" placeholder="Enter Your Email Address">
+                    <button class="some-button">Subscribe</button>
+                </fieldset>
+            </section>
+        </div>
+        <hr style="padding: 0; margin: 0"/>
+        <section class="flex-content padding_1x">
+            <p style="font-weight:400 ;">2023 Furniro. All rights reserved.</p>
+        </section>
+        <div class="flex">
+
+        </div>
+    </footer>
+</div>
+</body>
+</html>
