@@ -1,0 +1,21 @@
+{
+  "name": "simple-fastify-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.23.2"
+  },
+  "devDependencies": {
+    "livereload": "^0.9.3",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": "18.17.1"
+  }
+}
