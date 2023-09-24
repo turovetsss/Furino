@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,900;1,600&display=swap"
           rel="stylesheet">
-          <script src="registry.js"></script>
+          <script src="log2.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -38,8 +38,7 @@
             <nav class="header__group menu">
                 <ul class="group__list">
                     <li class="group__item">
-                        <a href="" class="group__link"><img src="img/mdi_account-alert-outline.png" alt="" width="23"
-                                                            height="23"></a>
+                        <a href="" class="group__link"><img src="img/mdi_account-alert-outline.png" alt="" width="23" height="23"></a>
                     </li>
                     <li class="group__item">
                         <a href="" class="group__link"><img src="img/akar-icons_search.png" width="23" height="23"></a>
@@ -49,7 +48,7 @@
                     </li>
                     <li class="group__item">
                         <a href="" class="group__link"><img src="img/ant-design_shopping-cart-outlined.png" width="23"
-                                                            height="23"></a>
+                         height="23"></a>
                     </li>
                 </ul>
             </nav>
@@ -63,18 +62,28 @@
       </div>
       <main id="main-holder">
         <h1 id="login-header">Sign Up</h1>
-        <form id="login-form" class="registry-form" >
-          <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-          <p></p>
-         <input type="text" name="password" id="username-field" class="login-form-field" placeholder="Repeat Password">
-        <div id="login-error-msg-holder">
-          <p id="login-error-msg">Invalid username and/or password</p>
-        </div>
- 
-          <input type="submit" value="Sign Up" id="login-form-submit" >
-          <a href="#">Already have an account?</a>
-          <button class="create-account">Login</button>
-        </form>
+        <form id="registrationForm" onsubmit="handleSubmit(event)">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br>
+          <span id="nameError" class="error"></span><br>
+  
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br>
+          <span id="emailError" class="error"></span><br>
+  
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password" required minlength="8"><br>
+          <span id="passwordError" class="error"></span><br>
+  
+          <label for="confirmPassword">Confirm Password:</label><br>
+          <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+          <span id="confirmPasswordError" class="error"></span><br>
+  
+          <label for="age">Age:</label><br>
+          <input type="number" id="age" name="age" required min="18" max="100"><br>
+          <span id="ageError" class="error"></span><br>
+
+          <input type="submit" value="Register" id="login-form-submit" style="margin-left: 50px;">
       </main>
     </div>
 
