@@ -1,5 +1,5 @@
 {
-  "name": "simple-fastify-server",
+  "name": "simple-fastify-server",  
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
