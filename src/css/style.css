@@ -59,10 +59,12 @@ hr{
   object-fit: cover;
 }
 
-
+.warning {
+  border-color: red;
+}
 /*cont*/
+
 #main-holder {
-  width: 50%;
   height: 70%;
   display: grid;
   justify-items: center;
@@ -158,12 +160,10 @@ form .create-account {
   margin: 0 auto;
 }
 form {
-  display: flex;
   flex-direction: column;
   background: #fff;
   padding: 2rem;
   width: 530px;
-  height: 500px;
   border-radius: 0.5rem;
 }
 .registry-form{
@@ -175,10 +175,6 @@ form {
   height: 600px;
   border-radius: 0.5rem;
 }
-
- 
-
-
 
 /*-------HEAD-------------------------------------------------------------------------------------*/
 .header{
@@ -260,7 +256,7 @@ flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../img/Rectangle 1.png');
+  background-image: url('../img/Rectangle_1.png');
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 316px;
@@ -291,8 +287,12 @@ top: 0;
 left: 0;
 right: 0;
 }
+.error {
+  color: red;
+
+}
 /*-------------FORM-------------------------------------------------------------------------------------*/
-input[type=text], select {
+input[type=text], input[type=password], input[type=email],input[type=number], input[type=email] select {
   width: 100%;
   padding: 20px 20px;
   margin: 25px 0;
