@@ -16,7 +16,7 @@
     <header class="header">
         <div class="header__container _container">
             <a href="" class="header__logo">
-                <img src="img/Meubel-House_Logos-05.png" alt="">
+                <img src="img/Meubel- House_Logos-05.png" alt="">
                 Furniro
             </a>
             <nav class="header__menu menu">
@@ -65,23 +65,22 @@
         <form id="registrationForm" onsubmit="handleSubmit(event)">
           <label for="name">Name:</label><br>
           <input type="text" id="name" name="name" required><br>
-          <span id="nameError" class="error"></span><br>
+          <div class="error" id="nameError"></div>
   
           <label for="email">Email:</label><br>
           <input type="email" id="email" name="email" required><br>
-          <span id="emailError" class="error"></span><br>
+          <div class="error" id="emailError"></div>
   
           <label for="password">Password:</label><br>
           <input type="password" id="password" name="password" required minlength="8"><br>
-          <span id="passwordError" class="error"></span><br>
+          <div class="error" id="passwordError"></div>
   
           <label for="confirmPassword">Confirm Password:</label><br>
           <input type="password" id="confirmPassword" name="confirmPassword" required><br>
-          <span id="confirmPasswordError" class="error"></span><br>
-  
+          <div class="error" id="passwordError"></div>
           <label for="age">Age:</label><br>
-          <input type="number" id="age" name="age" required min="18" max="100"><br>
-          <span id="ageError" class="error"></span><br>
+          <input type="date" class="form-control" id="dateStart" name="dateStart">
+          <div class="error" id="ageError"></div>
 
           <input type="submit" value="Register" id="login-form-submit" style="margin-left: 50px;">
       </main>

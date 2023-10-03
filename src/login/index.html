@@ -62,15 +62,16 @@
       </div>
       <main id="main-holder">
         <h1 id="login-header">Login</h1>
-        <form id="login-form" >
-          <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+        <form id="login-form">
+          <input type="text" name="username" id="firstName" class="login-form-field" placeholder="Username">
+          <div class="error" id="nameError"></div>
           <input type="password" name="password" id="username-field" class="login-form-field" placeholder="Password">
-        <div id="login-error-msg-holder">
-          <p id="login-error-msg">Invalid username and/or password</p>
+          <div class="error" id="passwordError"></div>
+          <div id="login-error-msg-holder">
         </div>
-          <input type="submit" value="Login" id="login-form-submit" >
+        <input type="button" value="Login" id="login-form-submit" onclick="validateForm()">
           <a href="#" style="padding: 10px;">Forgot Password ?</a>
-          <button class="create-account">Create New Account</button>
+          <button class="create-account" >Create New Account</button>
         </form>
       </main>
     </div>

@@ -292,7 +292,7 @@ right: 0;
 
 }
 /*-------------FORM-------------------------------------------------------------------------------------*/
-input[type=text], input[type=password], input[type=email],input[type=number], input[type=email] select {
+input[type=text], input[type=password], input[type=email],input[type=number], input[type=email], input[type=date] select {
   width: 100%;
   padding: 20px 20px;
   margin: 25px 0;
