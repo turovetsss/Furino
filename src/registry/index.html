@@ -77,12 +77,12 @@
   
           <label for="confirmPassword">Confirm Password:</label><br>
           <input type="password" id="confirmPassword" name="confirmPassword" required><br>
-          <div class="error" id="passwordError"></div>
+          <div class="error" id="confirmPasswordError"></div>
           <label for="age">Age:</label><br>
           <input type="date" class="form-control" id="dateStart" name="dateStart">
           <div class="error" id="ageError"></div>
 
-          <input type="submit" value="Register" id="login-form-submit" style="margin-left: 50px;">
+          <input type="submit" value="Register" id="login-form-submit" style="margin-left: 50px;" onclick="validateFormRegistry()">
       </main>
     </div>
 

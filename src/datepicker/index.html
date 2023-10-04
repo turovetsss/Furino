@@ -3,39 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/datepicker.css"/>
-  <script src="./js/datepicker.js"></script>
+  <link rel="stylesheet" href="../css/datepicker.css"/>
   <title>Document</title>
 </head>
 <body>
-  <div class="calendar-container">
-    <header class="calendar-header">
-      <div class="calendar-navigation">
-      <span id="calendar-prev"
-      class="material-symbols-rounded"><
-        </span>
-        <p class="calendar-current-date"></p>
-       
-      
-            <span id="calendar-next"
-                  class="material-symbols-rounded">
-                  >
-            </span>
-        </div>
-    </header>
-
-    <div class="calendar-body">
-        <ul class="calendar-weekdays">
-            <li>Sun</li>
-            <li>Mon</li>
-            <li>Tue</li>
-            <li>Wed</li>
-            <li>Thu</li>
-            <li>Fri</li>
-            <li>Sat</li>
-        </ul>
-        <ul class="calendar-dates"></ul>
+  <div class="calendar">
+    <div class="header">
+      <button id="prevMonth"><</button>
+      <h3 id="monthYear"></h3>
+      <button id="nextMonth">></button>
     </div>
-</div>
+    <table>
+      <thead>
+        <tr>
+          <th>MO</th>
+          <th>TU</th>
+          <th>WE</th>
+          <th>TH</th>
+          <th>FR</th>
+          <th>SA</th>
+          <th>SU</th>
+        </tr>
+      </thead>
+      <tbody id="calendarBody"></tbody>
+    </table>
+    <div>
+      <label for="selectedDate">Select date:</label>
+      <input type="text" id="selectedDate" placeholder="XX.MM.YYYY">
+    </div>
+  </div>
 </body>
+
 </html>
+<script src="../js/datepicker.js"></script>

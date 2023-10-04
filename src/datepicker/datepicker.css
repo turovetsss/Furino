@@ -1,7 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
 
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+}
 .calendar{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   width:300px;
   padding:10px;
   border:1px solid #ccc;
@@ -16,13 +27,11 @@ table{
   width: 100%;
   border-collapse: collapse;
 }
-th, td {
+th,td{
   text-align: center;
   padding: 5px;
-  border:1px solid #ccc;
 
 }
 #selectedDate{
-  font-size: 12px;
   margin-top: 10px;
 }

@@ -1,63 +1,71 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-let date = new Date();
-let year = date.getFullYear();
-let month = date.getMonth();
- 
-const day = document.querySelector(".calendar-dates");
-const currdate = document.querySelector(".calendar-current-date");
-const prenexIcons = document.querySelectorAll(".calendar-navigation span");
-const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-];
-const manipulate = () => {
+window.addEventListener("load", function () {
+  const prevMonthBtn = document.getElementById("prevMonth");
+  const nextMonthBtn = document.getElementById("nextMonth");
+  const monthYear = document.getElementById("monthYear");
+  const calendarBody = document.getElementById("calendarBody");
+  const selectedDateInput = document.getElementById("selectedDate");
+  let currentDate = new Date();
+  function renderCalendar() {
+    calendarBody.innerHTML = "";
+    const currentMonth = currentDate.getMonth();
+    const currentYear = currentDate.getFullYear();
 
-    let dayone = new Date(year, month, 1).getDay();
-    let lastdate = new Date(year, month + 1, 0).getDate();
-    let dayend = new Date(year, month, lastdate).getDay();
-    let monthlastdate = new Date(year, month, 0).getDate();
-    let lit = "";
-    for (let i = dayone; i > 0; i--) {
-        lit +=
-            `<li class="inactive">${monthlastdate - i + 1}</li>`;
-    }
-    for (let i = 1; i <= lastdate; i++) {
-        let isToday = i === date.getDate()
-            && month === new Date().getMonth()
-            && year === new Date().getFullYear()
-        lit += `<li class="${isToday}">${i}</li>`;
-    }
-    for (let i = dayend; i < 6; i++) {
-        lit += `<li class="inactive">${i - dayend + 1}</li>`
-    }
-    currdate.innerText = `${months[month]} ${year}`;
-    day.innerHTML = lit;
-}
- 
-manipulate();
-prenexIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-   month = icon.id === "calendar-prev" ? month - 1 : month + 1;
+    monthYear.textContent = new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      year: "numeric",
+    }).format(currentDate);
 
-        if (month < 0 || month > 11) {
-            date = new Date(year, month, new Date().getDate());
-            year = date.getFullYear();
-            month = date.getMonth();
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+    let date = 1;
+    for (let i = 0; i < 6; i++) {
+      const row = document.createElement("tr");
+      for (let j = 0; j < 7; j++) {
+        const cell = document.createElement("td");
+
+        if (i === 0 && j < firstDay) {
+          cell.textContent = "";
+        } else if (date > daysInMonth) {
+          cell.textContent = "";
+        } else {
+          cell.textContent = date;
+          cell.addEventListener("click", selectDate);
+          date++;
         }
-        else {
-            date = new Date();
-        }
-        manipulate();
-    });
-});
+
+        row.appendChild(cell);
+      }
+
+      calendarBody.appendChild(row);
+    }
+  }
+
+  function selectDate(event) {
+    const selectedDate = new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      event.target.textContent
+    );
+    selectedDateInput.valueAsDate = selectedDate;
+  }
+
+  prevMonthBtn.addEventListener("click", function () {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    renderCalendar();
+  });
+
+  nextMonthBtn.addEventListener("click", function () {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    renderCalendar();
+  });
+
+  selectedDateInput.addEventListener("change", function () {
+    const selectedDate = new Date(selectedDateInput.value);
+    currentDate = selectedDate;
+    renderCalendar();
+  });
+
+  renderCalendar();
 });
