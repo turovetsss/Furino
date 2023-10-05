@@ -25,55 +25,53 @@ function ValidEmail(email) {
   return "";
 }
 function ValidPassword(password) {
-  if (/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*_\-]).{8,}$/.test(password)) {
+  if (
+    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*_\-]).{8,}$/.test(
+      password
+    )
+  ) {
     return "";
-} else {
+  } else {
     return "Password must contain at least 8 characters with an uppercase letter.";
-}
-  // console.log('spdfdfpd')
-  // if(password==="")
-  // {
-  //   return "Please fill in the fields";
-  // }
-  // else{
-  //   var regex2 = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*_\-]).{8,}$/;
-  //   if(regex2.text(password)===false){
-  //     return "Password must contain at least 8 characters with an uppercase letter.";
-  //   }
-  // }
-  // return "";
+  }
+
 }
 function ValidConfirmPassword(confirmPassword, password) {
-    console.log("password");
-    if (password === confirmPassword){
-      return "";
-    }
-    else{
-      return "Password do notmatches";
-    }
+  console.log("password");
+  if (password === confirmPassword) {
+    return "";
+  } else {
+    return "password do not matches";
+  }
 }
-//function isValidAge(age){
-//   console.log(age);
-//   if(age==="")
-//   {
-//     return"Please,fill in the fields"
-//   }
-
-// }
-
+function validAge(age) {
+  const selectedDate = new Date(age);
+  const today = new Date();
+  let a = today.getFullYear() - selectedDate.getFullYear();
+  const monthDiff = today.getMonth() - selectedDate.getMonth();
+  const dateDiff = today.getDate() - selectedDate.getDate();
+  if (monthDiff < 0 || (monthDiff === 0 && dateDiff < 0)) {
+    a--;
+  }
+  if (a < 18) {
+    return "You must be over 18 years old";
+  } else {
+    return "";
+  }
+}
 function validateFormRegistry() {
   const registrationForm = document.getElementById("registrationForm");
   const username = registrationForm.name.value;
   const password = registrationForm.password.value;
   const confirmPassword = registrationForm.confirmPassword.value;
   const email = registrationForm.email.value;
-  // const age=registrationForm.dateStart.value;
+  const age = registrationForm.dateStart.value;
   let RegistryIsValid = true;
-  const confirmPasswordError = ValidConfirmPassword(confirmPassword,password);
+  const confirmPasswordError = ValidConfirmPassword(confirmPassword, password);
   const usernameError = ValidUsername(username);
   const passwordError = ValidPassword(password);
   const emailError = ValidEmail(email);
-  //const ageError=isValidAge(age);
+  const ageError = validAge(age);
   if (usernameError) {
     printError("nameError", usernameError);
     RegistryIsValid = false;
@@ -102,21 +100,20 @@ function validateFormRegistry() {
     printError("confirmPasswordError", "");
   }
 
-  // if(ageError){
-  //   print("ageError",ageError)
-  //   formIsValid=false;
-  // }
-  // else{
-  //   printError("ageError","")
-  // }
+  if (ageError) {
+    printError("ageError", ageError);
+    RegistryIsValid = false;
+  } else {
+    printError("ageError", "");
+  }
 
-  if (RegistryIsValid==true) {
+  if (RegistryIsValid) {
     const formData2 = {
       username: username,
       email: email,
       password: password,
       confirmPassword: confirmPassword,
-      //  age: age
+      age: age,
     };
     console.log(formData2);
     console.log("Form is valid.Sending data...");

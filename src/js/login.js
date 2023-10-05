@@ -4,21 +4,25 @@ function printError(elemId, hintMsg) {
 
 function isValidUsername(username) {
   if (username === "") {
-      return "Please fill in the fields";
+    return "Please fill in the fields";
   } else {
-      var regex = /^[a-zA-Z\s]+$/;
-      if (regex.test(username) === false) {
-          return "Please, enter a valid name";
-      }
+    var regex = /^[a-zA-Z\s]+$/;
+    if (regex.test(username) === false) {
+      return "Please, enter a valid name";
+    }
   }
   return "";
 }
 
 function isValidPassword(password) {
-  if (/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*_\-]).{8,}$/.test(password)) {
-      return "";
+  if (
+    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*_\-]).{8,}$/.test(
+      password
+    )
+  ) {
+    return "";
   } else {
-      return "Password must contain at least 8 characters with an uppercase letter.";
+    return "Password must contain at least 8 characters with an uppercase letter.";
   }
 }
 
@@ -32,27 +36,27 @@ function validateForm() {
   const passwordError = isValidPassword(password);
 
   if (usernameError) {
-      printError("nameError", usernameError);
-      formIsValid = false;
+    printError("nameError", usernameError);
+    formIsValid = false;
   } else {
-      printError("nameError", "");
+    printError("nameError", "");
   }
 
   if (passwordError) {
-      printError("passwordError", passwordError);
-      formIsValid = false;
+    printError("passwordError", passwordError);
+    formIsValid = false;
   } else {
-      printError("passwordError", "");
+    printError("passwordError", "");
   }
 
   if (formIsValid) {
-      const formData = {
-          username: username,
-          password: password
-      };
-      console.log(formData);
+    const formData = {
+      username: username,
+      password: password,
+    };
+    console.log(formData);
 
-      console.log("Form is valid. Sending data...");
+    console.log("Form is valid. Sending data...");
   }
 
   return false; // предотвращаем обсерантус стандартного действия кнопки(не отправляем форму)
