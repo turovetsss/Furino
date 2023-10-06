@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+}
+.calendar{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width:300px;
+  padding:10px;
+  border:1px solid #ccc;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+th,td{
+  text-align: center;
+  padding: 5px;
+
+}
+#selectedDate{
+  margin-top: 10px;
+}

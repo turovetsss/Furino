@@ -1,4 +1,5 @@
 .cart_block {
+    visibility: visible;
     display: flex;
     justify-content: center;
     padding: 72px 100px;
@@ -11,6 +12,7 @@
 }
 
 .cart_block-product-product-header {
+  border-radius: 10px;
     display: flex;
     padding: 15px 145px;
     background-color: #F9F1E7;
@@ -22,12 +24,16 @@
 }
 
 .cart_block-product-product-list .background-sofa {
-    background-image: url('../img/Asgaard sofa 5.png');
+    background-image: url('img/Asgaard_sofa_5.png');
     background-size: cover;
     background-repeat: no-repeat;
     min-width: 111px;
     min-height: 90px;
     margin-right: 35px;
+}
+
+.delivery h3{
+  padding-bottom: 20px;
 }
 
 .cart_block-product-product-list .list-product {
@@ -51,6 +57,7 @@
 }
 
 .cart_block-product-totals {
+  border-radius: 10px;
     background-color: #F9F1E7;
     padding: 15px 75px 80px 75px;
     display: flex;
