@@ -143,10 +143,20 @@
             Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <b>privacy policy</b>.
           </span>
                 </p>
-                <a href="#" class="total_btn">Place order</a>
+                <a href="#" class="total_btn">To pay</a>
             </div>
         </div>
     </div>
+    <form class="payment_cart">
+      <label>Credit Card Number</label>
+      <input type="text" name="number"/>
+      <label>Expiration</label>
+      <input type="text" placeholder="MM/YY" name="expiry"/>
+      <label>CVV</label>
+      <input type="text" name="cvv"/>
+      <button type="button" class="some-button">Submit</button>
+      <button type="button" class="some-button">Clear</button>
+    </form>
     <section class="page__advantages advantages">
         <div class="advantages__container _container">
             <div class="advantages__body">
@@ -235,3 +245,4 @@
 </div>
 </body>
 </html>
+<script src="../js/payment.js"></script>

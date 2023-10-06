@@ -137,7 +137,7 @@ hr{
 
 
 #login-form-submit {
-
+text-align: center;
   outline: none;
   border: none;
   background:#B88E2F;
@@ -366,6 +366,10 @@ input[type=text], input[type=password], input[type=email],input[type=number], in
   border-radius: 5px;
   max-width: 608px;
   background-color: #ffffff;
+}
+/*---------------Card------------------------------------------*/
+.payment_cart{
+  visibility: hidden;
 }
 /*----------------achievements---------------------------------------------------------------------*/
 .page__advantages {
