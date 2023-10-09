@@ -261,7 +261,63 @@ flex-wrap: wrap;
   background-size: cover;
   min-height: 316px;
 }
-
+.main-home-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 316px;
+}
+.buy_button{
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.Browse_block {
+  text-align: center;
+  display: block;
+}
+.title-block{
+  padding:40px;
+  text-align: center;
+}
+/*--------------------room-inspro-----------------------*/
+.inspro_room {
+  background-color: #FCF8F3;
+  display: block;
+}
+.info_room {
+}
+.carousel-room {
+}
+.f_cart {
+  padding: 15px;
+  display: inline;
+}
+.s_cart {
+  padding: 15px;
+  display: inline;
+}
+.t_cart {
+  padding: 15px;
+  display: inline;
+}
+.buy_now_block {
+  padding: 40px;
+  text-align: left;
+  position: absolute;
+  margin-top:300px;
+  margin-left: 800px;
+  border-radius: 10px;
+  background-color: #FFF3E3;;
+  display:inline-block;
+}
+.main-home-block__container{
+  display: block;
+  text-align: center;
+  /*margin-top: 100px;*/
+}
 .main-block__container{
   display: block;
   text-align: center;
