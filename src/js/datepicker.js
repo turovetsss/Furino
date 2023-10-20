@@ -32,7 +32,7 @@ window.addEventListener("load", function () {
         } else {
           cell.textContent = date;
           cell.addEventListener("click", selectDate);
-          date++;
+          date++;            
         }
 
         row.appendChild(cell);
@@ -41,7 +41,6 @@ window.addEventListener("load", function () {
       calendarBody.appendChild(row);
     }
   }
-
   function selectDate(event) {
     const selectedDate = new Date(
       currentDate.getFullYear(),
@@ -50,7 +49,6 @@ window.addEventListener("load", function () {
     );
     selectedDateInput.valueAsDate = selectedDate;
   }
-
   prevMonthBtn.addEventListener("click", function () {
     currentDate.setMonth(currentDate.getMonth() - 1);
     renderCalendar();

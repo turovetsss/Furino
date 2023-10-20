@@ -11,6 +11,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+.calendar td.selected {
+  background: #038fcf;
+  color: #FFFFFF;
+  box-shadow: 1px 1px rgba(255, 255, 255, 0.5) inset;
+}
 .calendar{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width:300px;

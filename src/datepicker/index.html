@@ -9,28 +9,29 @@
 <body>
   <div class="calendar">
     <div class="header">
-      <button id="prevMonth"><</button>
+      <a id="prevMonth">❮</a>
       <h3 id="monthYear"></h3>
-      <button id="nextMonth">></button>
+      <a id="nextMonth">❯</a>
     </div>
     <table>
       <thead>
         <tr>
-          <th>MO</th>
-          <th>TU</th>
-          <th>WE</th>
-          <th>TH</th>
-          <th>FR</th>
-          <th>SA</th>
-          <th>SU</th>
+          <th><span class="cal-text">M</h1></th>
+          <th><span class="cal-text">T</h1></th>
+          <th><span class="cal-text">W</h1></th>
+          <th><span class="cal-text">T</h1></th>
+          <th><span class="cal-text">F</h1></th>
+          <th><span class="cal-text">S</h1></th>
+          <th><span class="cal-text">S</h1></th>
         </tr>
       </thead>
       <tbody id="calendarBody"></tbody>
     </table>
-    <div>
-      <label for="selectedDate">Select date:</label>
-      <input type="text" id="selectedDate" placeholder="XX.MM.YYYY">
-    </div>
+   
+  </div>
+  <div>
+    <label for="selectedDate">Select date:</label>
+    <input type="text" id="selectedDate" placeholder="XX.MM.YYYY">
   </div>
 </body>
 
