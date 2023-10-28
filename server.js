@@ -55,3 +55,5 @@ fastify.listen({ port: 80 }, (err) => {
   if (err) throw err;
   console.log('Server started');
 })
+
+console.log(1);
